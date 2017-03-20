@@ -1,0 +1,49 @@
+created: 20161022173353204
+modified: 20161022173459665
+tags: atlas
+title: Building Atlas UI
+
+steve did `npm install gulp`
+`gulp`
+but keith says its not needed: 
+
+it's `npm run {scriptname}`, but some are "built-in" `start` `stop` and `test` so don't need the `run`
+
+!Building Atlas UI
+
+```
+npm install
+npm run start
+```
+theres a bug and you need to make a build folder in root 
+
+at some point you can:
+
+```
+npm run test
+```
+The code that builds the array of values is in <b>dropdown.js</b> on <b>lines 20-23</b>
+
+```
+return <option key={}
+```
+
+We found that we are passing the data to react which is caching before the dom based on a rendering strategy that we give it, it seems to be getting the wrong strategy
+
+<b>dropdown-builder.js</b> in widgets con
+
+!!!Whats flux
+It allows react to use one way communication in an MVC model by enabling a message bus for react
+
+!!!View/Edit screen for video masters
+#get an existing VM and display it on screen “i’ve got the load”`screen.js``video-master-edit.screen`
+#so we’re given a VM from the backend to make it something on screen - with dropdown which uses a view model (see `persistChangesToVideoMaster`. This takes the JS object that RDF gives you AND the view model and its state(as opposed to the load - we’re taking the updated state and pushing it back not taking data and rendering it))
+#We get the list of editable fields
+#We convert the view model into a pojo because its easier to work with
+#Then we filter the mojo to grab the editable properties
+#Then you’re napping the list of editable properties over the mojo which gives us a list of views - as pojo[prop]
+#Now we call into the video master service and say: save these updates into this VM resource (Why are we getting editable properties when we’re going from frontend to backend? It's because they are the only things that are GOING to change, so its a bit like an optimisation)
+#It will call the `AtlasDataContext` in order to save it, that's the bit that steve is writing that's going to do the talking to the backend, and which he's mocked in order to check that this bit's working right…
+
+This is all <b>MVVM - model view view model</b>
+

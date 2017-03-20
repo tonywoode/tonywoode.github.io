@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>My Reptar Title</title>
+  <meta name="description" content="Your website's description goes here.
+">
+  <meta name="keywords" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="/css/main-9048261e4d.css" />
+</head>
+<body class="post-template">
+
+  <header class="main-header">
+    <div class="vertical">
+      <div class="main-header-content">
+        <h1 class="page-title">
+          <a href="/">My Reptar Title</a>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="content" role="main">
+    
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Another sucka!</h1>
+    <section class="post-meta">
+      <time class="post-date" datetime="20 March 2017">20 March 2017</time>
+      <span>&middot; 
+        <a href="/tag/meta/">meta</a>
+      </span>
+    </section>
+  </header>
+
+  <section class="post-content">
+    <p>created: 20161022173353204
+modified: 20161022173459665
+tags: atlas
+title: Building Atlas UI</p>
+<p>steve did <code>npm install gulp</code>
+<code>gulp</code>
+but keith says its not needed:</p>
+<p>it's <code>npm run {scriptname}</code>, but some are &quot;built-in&quot; <code>start</code> <code>stop</code> and <code>test</code> so don't need the <code>run</code></p>
+<p>!Building Atlas UI</p>
+<pre><code>npm install
+npm <span class="hljs-keyword">run</span><span class="bash"> start
+</span></code></pre>
+<p>theres a bug and you need to make a build folder in root</p>
+<p>at some point you can:</p>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span>
+</span></code></pre>
+<p>The code that builds the array of values is in <b>dropdown.js</b> on <b>lines 20-23</b></p>
+<pre><code><span class="hljs-keyword">return</span> &lt;<span class="hljs-keyword">option</span> key={}
+</code></pre>
+<p>We found that we are passing the data to react which is caching before the dom based on a rendering strategy that we give it, it seems to be getting the wrong strategy</p>
+<p><b>dropdown-builder.js</b> in widgets con</p>
+<p>!!!Whats flux
+It allows react to use one way communication in an MVC model by enabling a message bus for react</p>
+<p>!!!View/Edit screen for video masters
+#get an existing VM and display it on screen “i’ve got the load”<code>screen.js``video-master-edit.screen</code>
+#so we’re given a VM from the backend to make it something on screen - with dropdown which uses a view model (see <code>persistChangesToVideoMaster</code>. This takes the JS object that RDF gives you AND the view model and its state(as opposed to the load - we’re taking the updated state and pushing it back not taking data and rendering it))
+#We get the list of editable fields
+#We convert the view model into a pojo because its easier to work with
+#Then we filter the mojo to grab the editable properties
+#Then you’re napping the list of editable properties over the mojo which gives us a list of views - as pojo[prop]
+#Now we call into the video master service and say: save these updates into this VM resource (Why are we getting editable properties when we’re going from frontend to backend? It's because they are the only things that are GOING to change, so its a bit like an optimisation)
+#It will call the <code>AtlasDataContext</code> in order to save it, that's the bit that steve is writing that's going to do the talking to the backend, and which he's mocked in order to check that this bit's working right…</p>
+<p>This is all <b>MVVM - model view view model</b></p>
+
+  </section>
+
+  <footer class="post-footer">
+  </footer>
+
+</article>
+
+
+
+    
+  </main>
+
+  <footer class="site-footer clearfix">
+    <p class="footer-description">
+      &copy; My Reptar Title
+    </p>
+    <p class="footer-published">
+      joyfully published by <a href="https://github.com/reptar/reptar">reptar</a>
+    </p>
+  </footer>
+
+  <script type="text/javascript" src="/js/main-c614ff7b24.js"></script>
+</body>
+</html>
